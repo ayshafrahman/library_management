@@ -34,6 +34,14 @@ new_df['status'] = 'available'
 
 ##  POSTGRESQL CONNECTION  ##
 
+# Define variables for PostgreSQL connection
+#host = 'localhost'
+#dbname = 'postgres'
+#user = 'postgres'
+#password = '1234'
+#port = '5432'
+#database = 'postgres'
+
 DATABASE_URL = "postgresql://csc6710:y6HKYcwrYdH3XBfr6m6Wjmkzlh1lG0Kr@dpg-d017lgvgi27c73a2k0i0-a.virginia-postgres.render.com/librarydb_ga0x"#os.getenv("postgresql://csc6710:VTUTpwJbXh8AgVmu9FObBduOoSYBMlRY@dpg-d00uv1qdbo4c73dmj7qg-a.virginia-postgres.render.com/library_qzjp")
 #DATABASE_URL = f'postgresql://{user}:{password}@{host}:{port}/{database}'
 #print("Connecting to:", DATABASE_URL)
