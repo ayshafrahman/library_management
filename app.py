@@ -16,7 +16,7 @@ def get_db_connection():
 def index():
     conn = get_db_connection()
     cur = conn.cursor()
-    cur.execute('SELECT title, author, branch, status FROM book LIMIT 10;')
+    cur.execute('SELECT title, authors, branch, status FROM book LIMIT 10;')
     books = cur.fetchall()
     cur.close()
     conn.close()
