@@ -66,7 +66,7 @@ with engine.connect() as conn:
     conn.execute(text("DROP TABLE IF EXISTS staff CASCADE"))
     conn.execute(text("""CREATE TABLE IF NOT EXISTS staff(
         staffID INT PRIMARY KEY,
-        staffPIN VARCHAR(50)
+        staffPIN VARCHAR(50),
         branch VARCHAR(50) REFERENCES libraryBranch(branchID),
         firstName VARCHAR(50),
         lastName VARCHAR(50),
@@ -133,11 +133,11 @@ with engine.connect() as conn:
     ##  INITIAL SAMPLE DATA  ##
     
     # Insert sample library branches (Neopets names)
-    conn.execute(text("""INSERT INTO libraryBranch(branchID,location) VALUES
+    conn.execute(text("""INSERT INTO libraryBranch(branchID,location,pass) VALUES
         ('001','Meridell','mirth'),
         ('002','Brightvale','knowledge'),
         ('003','Faerieland','magic'),
-        ('004','Moltara','lava)"""))
+        ('004','Moltara','lava')"""))
     
     # Insert sample staff
     conn.execute(text("""INSERT INTO staff(
