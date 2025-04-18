@@ -134,10 +134,10 @@ with engine.connect() as conn:
     
     # Insert sample library branches (Neopets names)
     conn.execute(text("""INSERT INTO libraryBranch(branchID,location) VALUES
-        ('001','Meridell'),
-        ('002','Brightvale'),
-        ('003','Faerieland'),
-        ('004','Moltara')"""))
+        ('001','Meridell','mirth'),
+        ('002','Brightvale','knowledge'),
+        ('003','Faerieland','magic'),
+        ('004','Moltara','lava)"""))
     
     # Insert sample staff
     conn.execute(text("""INSERT INTO staff(
